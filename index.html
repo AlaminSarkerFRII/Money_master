@@ -72,17 +72,18 @@
             </div>
           </form>
           <br>
-          <h4 id="total-expenses">Total Expenses: 5500 </h4>
-          <h4 id="balace-total">Balance: 4500 </h4>
+          <h4> Total Expenses: <span id="total-expenses"></span> </h4>
+          <h4> Balance:<span id="balace-total"></span></h4>
           <div class="btn-group text-center" role="group">
             <button type="button" class="btn btn-secondary">Save
-              <input type="text" class=" mx-2">
+              <input id ="saving-input" type="text" class=" mx-2">
             </button>
             <button type="button" class="btn btn-secondary">%</button>
-            <button type="button" class="btn btn-primary">Save</button>
+
+            <button id ="saving-button" type="button" class="btn btn-primary">Save</button>
             <br> <br>
-            <h4>Saving Amount: 2000 </h4>
-            <h4>Remaining Balance: 2500  </h4>
+            <h4>Saving Amount: <span id="saving-amount">2000</span> </h4>
+            <h4>Remaining Balance:<span id="reming-balance">2000</span>  </h4>
           </div>
            
         </div>
