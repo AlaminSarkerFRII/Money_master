@@ -3,18 +3,22 @@
 
 function getAmount(costId){
 
-    return document.getElementById(costId).value;
+     const amountInputText =  document.getElementById(costId);
+     const amountInput = amountInputText.value;
+     amountInputText.value ='';
+     return amountInput;
 
 }
 
 
 
+// calculation part....
 document.getElementById('calculation-button').addEventListener('click', function(){
 
 // get income value
     const incomeInputBalance = getAmount('income-input');
     const amountValue = parseFloat(incomeInputBalance);
-
+    
     //get user cost & total
 const foodCostInput = getAmount('food-cost');
 const rentCostText = getAmount('rent-amount');
@@ -32,7 +36,6 @@ const reminingBalace = amountValue - totalExpensesCost;
 
 balanceText.innerText = balance + reminingBalace ;
 
-// console.log(reminingBalace);
 
 });
 
@@ -53,7 +56,6 @@ const calcReminingBalance = parseFloat(incomeBalance) - parseFloat(saveCalc)
 
 remingBalance.innerText = calcReminingBalance; 
 
-    console.log(saveCalc);
-
+    // console.log(saveCalc);
 
 })
