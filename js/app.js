@@ -5,11 +5,7 @@ function getAmount(costId){
 
         return  document.getElementById(costId).value;
 
-
-
 }
-
-
 
 // calculation part....
 document.getElementById('calculation-button').addEventListener('click', function(){
@@ -42,16 +38,10 @@ console.log(totalExpensesCost);
 //set in total Expenses
 
 const totalCost = document.getElementById('total-expenses');
-console.log(totalCost);
-
-const balanceText = document.getElementById('balace-total');
-// const balance = balanceText.innerText;
-const reminingBalace = amountValue - totalExpensesCost;
-
+const balanceText = document.getElementById('balance-total');
+const reminingBalance = amountValue - totalExpensesCost;
 totalCost.innerText = totalExpensesCost;
-
-balanceText.innerText = reminingBalace ;
-
+balanceText.innerText = reminingBalance ;
 
 });
 
@@ -68,7 +58,7 @@ document.getElementById('saving-button').addEventListener('click' , function(){
     savingAmount.innerText = saveCalc;
 
     // reming balance ........
-    const balanceText = document.getElementById('balace-total');
+    const balanceText = document.getElementById('balance-total');
 const calcReminingBalance = parseFloat(balanceText.innerText ) - parseFloat(saveCalc)
 
 remingBalance.innerText = calcReminingBalance; 
