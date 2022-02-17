@@ -1,4 +1,5 @@
 
+//function use
 
 function getAmount(costId){
 
@@ -13,11 +14,11 @@ document.getElementById('calculation-button').addEventListener('click', function
 // get income value
     const incomeInputBalance = getAmount('income-input');
     const amountValue = parseFloat(incomeInputBalance);
-const foodCostInput = getAmount('food-cost');
 
+    //get user cost & total
+const foodCostInput = getAmount('food-cost');
 const rentCostText = getAmount('rent-amount');
 const clothsCostInput = getAmount('cloth-cost');
-
 const totalExpensesCost = parseFloat(foodCostInput) + parseFloat(clothsCostInput)+ parseFloat(rentCostText);
 
 //set in total Expenses
@@ -31,9 +32,7 @@ const reminingBalace = amountValue - totalExpensesCost;
 
 balanceText.innerText = balance + reminingBalace ;
 
-
-console.log(reminingBalace);
-
+// console.log(reminingBalace);
 
 });
 
