@@ -19,7 +19,6 @@ document.getElementById('calculation-button').addEventListener('click', function
     const amountValue = parseFloat(incomeInputBalance);
 
 
-
     //get user cost & total
 const foodCostInput = getAmount('food-cost');
 const rentCostText = getAmount('rent-amount');
@@ -28,8 +27,11 @@ const clothsCostInput = getAmount('cloth-cost');
 
 const totalExpensesCost = parseFloat(foodCostInput) + parseFloat(clothsCostInput)+ parseFloat(rentCostText);
 
+console.log(totalExpensesCost);
+//error handle on
+
  if(isNaN(parseFloat(incomeInputBalance)) || isNaN( parseFloat(foodCostInput)) || isNaN(parseFloat(clothsCostInput)) || isNaN (parseFloat(rentCostText))){
-        // console.log('click');
+
             alert ('enter a number');
        
            } else if(parseFloat(incomeInputBalance) < 0  || parseFloat(foodCostInput) < 0 || parseFloat(clothsCostInput) < 0 || parseFloat(rentCostText) < 0   ) {
@@ -40,13 +42,15 @@ const totalExpensesCost = parseFloat(foodCostInput) + parseFloat(clothsCostInput
 //set in total Expenses
 
 const totalCost = document.getElementById('total-expenses');
-totalCost.innerText = totalExpensesCost;
+console.log(totalCost);
 
 const balanceText = document.getElementById('balace-total');
-const balance = balanceText.innerText;
+// const balance = balanceText.innerText;
 const reminingBalace = amountValue - totalExpensesCost;
 
-balanceText.innerText = balance + reminingBalace ;
+totalCost.innerText = totalExpensesCost;
+
+balanceText.innerText = reminingBalace ;
 
 
 });
@@ -64,10 +68,9 @@ document.getElementById('saving-button').addEventListener('click' , function(){
     savingAmount.innerText = saveCalc;
 
     // reming balance ........
-const calcReminingBalance = parseFloat(incomeBalance) - parseFloat(saveCalc)
+    const balanceText = document.getElementById('balace-total');
+const calcReminingBalance = parseFloat(balanceText.innerText ) - parseFloat(saveCalc)
 
 remingBalance.innerText = calcReminingBalance; 
-
-    // console.log(saveCalc);
 
 })
